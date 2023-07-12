@@ -41,6 +41,7 @@ func kWeakestRows(mat [][]int, k int) []int {
             for _, value := range result {
                 if value == j {
                     outerLoopFlag = true
+                    break
                 }
             }
               

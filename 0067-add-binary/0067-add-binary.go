@@ -6,8 +6,6 @@ func addBinary(a string, b string) string {
     charsB := []rune(b)
 
     for i := len(a) - 1; i >= 0; i-- {
-        fmt.Print(i)
-        fmt.Println("CharsB",string(charsB))
         
         if lenB == -1{
             charsB = append([]rune{charsA[i]}, charsB...)
@@ -29,16 +27,12 @@ func addBinary(a string, b string) string {
             for j := lenB; j >= 0; j-- {
                 if charsB[j] == '0' {
                     charsB[j] = '1'
-                    fmt.Println("outj",string(charsB))
                     lenB--
                     break
                 } else {
-                    fmt.Println("jtop",string(charsB))
-                    fmt.Println("jindex",j)
                     charsB[j] = '0'
                     if j == 0 {
                         charsB = append([]rune{'1'}, charsB...)
-                        fmt.Println("j",string(charsB))
                         break
                     }
                 }
